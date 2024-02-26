@@ -15,17 +15,17 @@ export class PasswordentryComponent{
     lastName: '',
     dateOfBirth: ''
   };
-  constructor(private route: ActivatedRoute, private dataService: DataService) {
+    constructor(private route: ActivatedRoute, private dataService: DataService) {
     this.route.paramMap.subscribe((params) => {
       this.formData = window.history.state.data;
-      
+
     });
   }
 
   checkPassword(inputvalue : string)
       {
      this.dataComponent =this.dataService.getData();
-          
+              
      const valueChecker=[];
      
      valueChecker.push(this.dataComponent.dateOfBirth.split('/'))
@@ -37,16 +37,16 @@ export class PasswordentryComponent{
        const val1 =/[a-z]/.test(inputvalue)
        const val2 =/[0-9]/.test(inputvalue)
        const val3 = /[^A-Za-z0-9]/.test(inputvalue)
-       const userValid = dataSpliter.some((value)=> inputvalue.includes(value))
+       const userValid = dataSpliter.some((value)=> inputvalue.toLowerCase().includes(value.toLowerCase()))
        if(userValid)
        {
         // this.barValue('All')
-        console.log('Contains user details')
+        alert('Contains user details')
        }
        else{
         if(val && val1 && val2 && val3)
         {
-         console.log('Strong Password')
+          alert('Strong Password')
         }
         else if(val===false){
          alert(`Password doesn't contain uppercase`);
