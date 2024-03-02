@@ -1,16 +1,16 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { faqModel } from './model/faq';
 import { faqValues } from './model/constants';
 
 @Component({
   selector: 'app-faq',
   templateUrl: './faq.component.html',
-  styleUrl: './faq.component.scss'
+  styleUrl: './faq.component.scss',
 })
 export class FaqComponent implements OnInit {
-  questionArray: faqModel[]=[];
-  
+  questionArray: faqModel[] = [];
+
   ngOnInit(): void {
-  this.questionArray = faqValues
+    this.questionArray = faqValues;
   }
 }

@@ -13,14 +13,10 @@ import { PasswordentryComponent } from './passwordentry/passwordentry.component'
     NavbarComponent,
     FaqComponent,
     PasswordpageComponent,
-    PasswordentryComponent
+    PasswordentryComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule,
-  ],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

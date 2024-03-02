@@ -1,4 +1,4 @@
-export interface faqModel{
-    question: string;
-    answer: string;
+export interface faqModel {
+  question: string;
+  answer: string;
 }

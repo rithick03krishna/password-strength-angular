@@ -8,10 +8,9 @@ describe('PasswordpageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [PasswordpageComponent]
-    })
-    .compileComponents();
-    
+      declarations: [PasswordpageComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(PasswordpageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
