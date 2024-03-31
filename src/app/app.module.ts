@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FaqComponent } from './faq/faq.component';
 import { PasswordpageComponent } from './passwordpage/passwordpage.component';
 import { PasswordentryComponent } from './passwordentry/passwordentry.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +16,12 @@ import { PasswordentryComponent } from './passwordentry/passwordentry.component'
     PasswordpageComponent,
     PasswordentryComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
