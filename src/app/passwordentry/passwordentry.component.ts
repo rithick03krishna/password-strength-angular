@@ -63,12 +63,32 @@ export class PasswordentryComponent {
     });
   }
 
+  randomValueCheckWithDob() {
+    let dob;
+    this.dataComponent = this.dataService.getData();
+    let randomValue = Math.floor(Math.random() * 90 + 10);
+    if (this.dataComponent) {
+      dob = this.dataComponent.dateOfBirth.split('/');
+
+      if (dob.some((val) => val.includes(randomValue.toString()))) {
+        this.randomValueCheckWithDob();
+      }
+
+      return randomValue;
+    }
+    return randomValue;
+  }
+
   generatePassword(variablesApiValues: string[]) {
     var s = '!"$%&/=?\u{20ac}';
+    const randomDOB =
+      this.dataComponent !== undefined
+        ? this.randomValueCheckWithDob()
+        : Math.floor(Math.random() * 90 + 10);
     alert(
       variablesApiValues[0].charAt(0).toLocaleUpperCase() +
         variablesApiValues[0].slice(1) +
-        Math.floor(Math.random() * 90 + 10) +
+        randomDOB +
         variablesApiValues[1] +
         s.substr(Math.floor(s.length * Math.random()), 2),
     );

@@ -12,10 +12,10 @@ export const faqValues: faqModel[] = [
   },
   {
     question: `What should the password doesn't contain?`,
-    answer: `It should be a word that may or may not be found in a dictionary , it can be name of a person, character, product, or organization. Generally password shouldn't contain user details mainly their firstname, lastname or Date of Birth.`,
+    answer: `It can be name of a person, character, product, or organization. Generally password shouldn't contain user details mainly their firstname, lastname or Date of Birth.`,
   },
   {
     question: 'Is this site secure to enter our details?',
-    answer: 'We generally do not store cache, or information you enter.',
+    answer: 'We generally do not store or record any information you enter.',
   },
 ];
